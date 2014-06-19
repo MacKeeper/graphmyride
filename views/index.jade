@@ -1,0 +1,14 @@
+doctype HTML
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(type='text/javascript', src='http://stuk.github.io/jszip/dist/jszip.js')
+        script(type='text/javascript', src='http://stuk.github.io/jszip-utils/dist/jszip-utils.js')
+        script(type='text/javascript', src='http://coffeescript.org/extras/coffee-script.js')
+        script(type='text/coffeescript', src='/javascripts/lib/graphmyride.coffee')
+        script(type='text/coffeescript').
+            window.loadRideCSV( 'data/2014-06-14-0801_Biking_WF.zip' )
+    body
+        h1= title
+        p Welcome to #{title}
